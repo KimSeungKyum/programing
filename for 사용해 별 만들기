@@ -1,0 +1,87 @@
+#include <stdio.h>
+
+int main(){
+
+	int x, y, y1, b;
+	//세모는 반복문
+
+	for(x=0; x<5; x++){
+		//띄어스킨 5X5
+		for(b=0; b<5; b++)
+			printf(" ");
+
+		//오른쪽으로 뒤집힌 세모
+		for(y=5; y>x; y--)
+			printf(" ");
+		for(y=0; y<=x; y++)
+			printf("*");
+		
+		//정상 세모
+		for(y=1; y<=x; y++)
+			printf("*");
+		
+		//줄띄기
+		puts("");//printf("\n");
+	}	
+
+
+	//뒤집힌 사다리꼴
+	for(x=0; x< 5; x++){//x=0,1,2
+		//정상 빈 세모
+		for(y=0; y<=x; y++)
+			printf(" ");
+		for(y=5; y>x; y--)
+			printf("*");
+
+		//별네모
+		for(y1=0; y1<9; y1++)
+			printf("*");
+		
+		//위로 뒤집힌 세모
+		for(y=x; y<5; y++)//x=0,1,2
+			printf("*");
+
+		printf("\n");
+	}
+
+	for(x=0; x< 5; x++){//x=0,1,2
+		//정상 빈 세모
+		for(y=x; y<5; y++)
+			printf(" ");
+		for(y=0; y<x; y++)
+			printf("*");
+
+		//별네모
+		for(y1=0; y1<=9; y1++)
+			printf("*");
+		
+		//위로 뒤집힌 세모
+		for(y=0; y<=x; y++)//x=0,1,2
+			printf("*");
+
+		printf("\n");
+	}
+	for(x=0; x<5; x++){
+		//띄어스킨 5X5
+		for(b=0; b<5; b++)
+			printf(" ");
+
+		for(y=0; y<=x; y++)
+			printf(" ");
+		for(y=5; y>x; y--)
+			printf("*");
+
+		
+		//위로 뒤집힌 세모
+		for(y=x; y<4; y++)//x=0,1,2
+			printf("*");
+		
+		//줄띄기
+		puts("");//printf("\n");
+	}	
+
+
+
+	
+	return 0;
+}
